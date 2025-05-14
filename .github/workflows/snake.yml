@@ -10,11 +10,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
       - name: Generate Snake Animation
         uses: Platane/snk@v2
         with:
-          github_user_name: ${{ github.repository_owner }}  # Automatically gets your username
+          github_user_name: gyan007  # Your GitHub username
           outputs: dist/snake.svg
+
       - name: Push Snake Animation to GitHub Pages
         uses: crazy-max/ghaction-github-pages@v3
         with:
